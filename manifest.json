@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Smart Auto Form Filler",
+  "name": "EasyFill",
   "version": "1.0",
   "description": "Smart, local auto form filler with profiles, similarity matching, and history.",
   "permissions": [
