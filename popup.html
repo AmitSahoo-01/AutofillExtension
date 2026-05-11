@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Auto Form Filler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="glass-container">
+    <header>
+      <h1>EasyFill</h1>
+      <button id="themeToggle" class="icon-btn" title="Toggle Dark Mode">🌙</button>
+    </header>
+
+    <main>
+      <!-- Save Current Form Section -->
+      <section class="card save-section">
+        <h3>Save Current Form</h3>
+        <p class="desc">Fill out a form on the page, name it, and save it for later.</p>
+        
+        <div id="active-form-status" class="status-indicator">Scanning page...</div>
+        
+        <div class="save-controls">
+          <input type="text" id="form-name-input" placeholder="e.g., Job Application 1" disabled>
+          <button id="btn-save-form" class="primary-btn" disabled>Save Form</button>
+        </div>
+      </section>
+
+      <!-- Saved Forms Section -->
+      <section class="card list-section">
+        <h3>Your Saved Forms</h3>
+        <ul id="saved-forms-list" class="saved-list">
+          <!-- Populated dynamically -->
+        </ul>
+      </section>
+    </main>
+    <p style="text-align: center; font-size: 12px;">Created By-AMIT </p>
+  </div>
+
+  <script src="scripts/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

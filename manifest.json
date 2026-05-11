@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Auto Form Filler",
+  "version": "1.0",
+  "description": "Smart, local auto form filler with profiles, similarity matching, and history.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/matcher.js", "scripts/autofill.js", "content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "autofill_active_form": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Quick Autofill the form on the current page"
+    }
+  }
+}
